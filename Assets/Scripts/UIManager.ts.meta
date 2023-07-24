@@ -1,0 +1,71 @@
+fileFormatVersion: 2
+guid: 44310f50df412d3429c0a2d1635d501e
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nexports.WindowCallType = void 0;\r\nconst UnityEngine_1
+    = require(\"UnityEngine\");\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    StartMenuWindow_1 = require(\"./StartMenuWindow\");\r\nconst EndMenuWindow_1
+    = require(\"./EndMenuWindow\");\r\nconst DialogueMenuWindow_1 = require(\"./DialogueMenuWindow\");\r\nconst
+    SettingsMenuWindow_1 = require(\"./SettingsMenuWindow\");\r\nvar WindowCallType;\r\n(function
+    (WindowCallType) {\r\n    WindowCallType[WindowCallType[\"SHOW_START_MENU_WINDOW\"]
+    = 1] = \"SHOW_START_MENU_WINDOW\";\r\n    WindowCallType[WindowCallType[\"HIDE_START_MENU_WINDOW\"]
+    = 2] = \"HIDE_START_MENU_WINDOW\";\r\n    WindowCallType[WindowCallType[\"SHOW_END_MENU_WINDOW\"]
+    = 3] = \"SHOW_END_MENU_WINDOW\";\r\n    WindowCallType[WindowCallType[\"HIDE_END_MENU_WINDOW\"]
+    = 4] = \"HIDE_END_MENU_WINDOW\";\r\n    WindowCallType[WindowCallType[\"SHOW_DIALOGUE_MENU_WINDOW\"]
+    = 5] = \"SHOW_DIALOGUE_MENU_WINDOW\";\r\n    WindowCallType[WindowCallType[\"HIDE_DIALOGUE_MENU_WINDOW\"]
+    = 6] = \"HIDE_DIALOGUE_MENU_WINDOW\";\r\n    WindowCallType[WindowCallType[\"SHOW_SETTINGS_MENU_WINDOW\"]
+    = 7] = \"SHOW_SETTINGS_MENU_WINDOW\";\r\n    WindowCallType[WindowCallType[\"HIDE_SETTINGS_MENU_WINDOW\"]
+    = 8] = \"HIDE_SETTINGS_MENU_WINDOW\";\r\n})(WindowCallType = exports.WindowCallType
+    || (exports.WindowCallType = {}));\r\nclass UIManager extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    Start() {\r\n    }\r\n    get StartMenuWindow() {\r\n        if (this._startMenuWindow
+    != undefined) {\r\n            return this._startMenuWindow;\r\n        }\r\n       
+    else {\r\n            this._startMenuWindow = UnityEngine_1.GameObject.Find(\"StartMenuWindow\").GetComponent($typeof(StartMenuWindow_1.default));\r\n           
+    return this._startMenuWindow;\r\n        }\r\n    }\r\n    get EndMenuWindow()
+    {\r\n        if (this._endMenuWindow != undefined) {\r\n            return this._endMenuWindow;\r\n       
+    }\r\n        else {\r\n            this._endMenuWindow = UnityEngine_1.GameObject.Find(\"EndMenuWindow\").GetComponent($typeof(EndMenuWindow_1.default));\r\n           
+    return this._endMenuWindow;\r\n        }\r\n    }\r\n    get DialogueMenuWindow()
+    {\r\n        if (this._dialogueMenuWindow != undefined) {\r\n            return
+    this._dialogueMenuWindow;\r\n        }\r\n        else {\r\n            this._dialogueMenuWindow
+    = UnityEngine_1.GameObject.Find(\"DialogueMenuWindow\").GetComponent($typeof(DialogueMenuWindow_1.default));\r\n           
+    return this._dialogueMenuWindow;\r\n        }\r\n    }\r\n    get SettingsMenuWindow()
+    {\r\n        if (this._settingsMenuWindow != undefined) {\r\n            return
+    this._settingsMenuWindow;\r\n        }\r\n        else {\r\n            this._settingsMenuWindow
+    = UnityEngine_1.GameObject.Find(\"SettingsMenuWindow\").GetComponent($typeof(SettingsMenuWindow_1.default));\r\n           
+    return this._settingsMenuWindow;\r\n        }\r\n    }\r\n    HideAllWindows()
+    {\r\n        this.StartMenuWindow.HideWindow();\r\n        this.EndMenuWindow.HideWindow();\r\n       
+    this.DialogueMenuWindow.HideWindow();\r\n    }\r\n    ExecuteWindowCommand(windowCallType)
+    {\r\n        switch (windowCallType) {\r\n            case WindowCallType.SHOW_START_MENU_WINDOW:\r\n               
+    this.HideAllWindows();\r\n                this.StartMenuWindow.ShowWindow();\r\n               
+    break;\r\n            case WindowCallType.HIDE_START_MENU_WINDOW:\r\n               
+    this.StartMenuWindow.HideWindow();\r\n                break;\r\n            case
+    WindowCallType.SHOW_END_MENU_WINDOW:\r\n                this.HideAllWindows();\r\n               
+    this.EndMenuWindow.ShowWindow();\r\n                break;\r\n            case
+    WindowCallType.HIDE_END_MENU_WINDOW:\r\n                this.EndMenuWindow.HideWindow();\r\n               
+    break;\r\n            case WindowCallType.SHOW_DIALOGUE_MENU_WINDOW:\r\n               
+    this.HideAllWindows();\r\n                this.DialogueMenuWindow.ShowWindow();\r\n               
+    break;\r\n            case WindowCallType.HIDE_DIALOGUE_MENU_WINDOW:\r\n               
+    this.DialogueMenuWindow.HideWindow();\r\n                break;\r\n           
+    case WindowCallType.SHOW_SETTINGS_MENU_WINDOW:\r\n                this.HideAllWindows();\r\n               
+    this.SettingsMenuWindow.ShowWindow();\r\n                break;\r\n           
+    case WindowCallType.HIDE_SETTINGS_MENU_WINDOW:\r\n                this.SettingsMenuWindow.HideWindow();\r\n               
+    break;\r\n            default:\r\n                break;\r\n        }\r\n   
+    }\r\n}\r\nexports.default = UIManager;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVUlNYW5hZ2VyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiVUlNYW5hZ2VyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7OztBQUFBLDZDQUF5QztBQUN6QyxpREFBcUQ7QUFDckQsdURBQWdEO0FBQ2hELG1EQUE0QztBQUM1Qyw2REFBc0Q7QUFDdEQsNkRBQXNEO0FBRXRELElBQVksY0FZWDtBQVpELFdBQVksY0FBYztJQUN0Qix1RkFBMEIsQ0FBQTtJQUMxQix1RkFBMEIsQ0FBQTtJQUUxQixtRkFBd0IsQ0FBQTtJQUN4QixtRkFBd0IsQ0FBQTtJQUV4Qiw2RkFBNkIsQ0FBQTtJQUM3Qiw2RkFBNkIsQ0FBQTtJQUU3Qiw2RkFBNkIsQ0FBQTtJQUM3Qiw2RkFBNkIsQ0FBQTtBQUNqQyxDQUFDLEVBWlcsY0FBYyxHQUFkLHNCQUFjLEtBQWQsc0JBQWMsUUFZekI7QUFFRCxNQUFxQixTQUFVLFNBQVEscUNBQXFCO0lBT3hELEtBQUs7SUFDTCxDQUFDO0lBRUQsSUFBVyxlQUFlO1FBRXRCLElBQUksSUFBSSxDQUFDLGdCQUFnQixJQUFJLFNBQVMsRUFDdEM7WUFDSSxPQUFPLElBQUksQ0FBQyxnQkFBZ0IsQ0FBQztTQUNoQzthQUFJO1lBQ0YsSUFBSSxDQUFDLGdCQUFnQixHQUFHLHdCQUFVLENBQUMsSUFBSSxDQUFDLGlCQUFpQixDQUFDLENBQUMsWUFBWSxTQUFDLHlCQUFlLEVBQUcsQ0FBQztZQUMzRixPQUFPLElBQUksQ0FBQyxnQkFBZ0IsQ0FBQztTQUMvQjtJQUNMLENBQUM7SUFFRCxJQUFXLGFBQWE7UUFFcEIsSUFBSSxJQUFJLENBQUMsY0FBYyxJQUFJLFNBQVMsRUFDcEM7WUFDSSxPQUFPLElBQUksQ0FBQyxjQUFjLENBQUM7U0FDOUI7YUFBSTtZQUNGLElBQUksQ0FBQyxjQUFjLEdBQUcsd0JBQVUsQ0FBQyxJQUFJLENBQUMsZUFBZSxDQUFDLENBQUMsWUFBWSxTQUFDLHVCQUFhLEVBQUcsQ0FBQztZQUNyRixPQUFPLElBQUksQ0FBQyxjQUFjLENBQUM7U0FDN0I7SUFDTCxDQUFDO0lBRUQsSUFBVyxrQkFBa0I7UUFFekIsSUFBSSxJQUFJLENBQUMsbUJBQW1CLElBQUksU0FBUyxFQUN6QztZQUNJLE9BQU8sSUFBSSxDQUFDLG1CQUFtQixDQUFDO1NBQ25DO2FBQUk7WUFDRixJQUFJLENBQUMsbUJBQW1CLEdBQUcsd0JBQVUsQ0FBQyxJQUFJLENBQUMsb0JBQW9CLENBQUMsQ0FBQyxZQUFZLFNBQUMsNEJBQWtCLEVBQUcsQ0FBQztZQUNwRyxPQUFPLElBQUksQ0FBQyxtQkFBbUIsQ0FBQztTQUNsQztJQUNMLENBQUM7SUFFRCxJQUFXLGtCQUFrQjtRQUV6QixJQUFJLElBQUksQ0FBQyxtQkFBbUIsSUFBSSxTQUFTLEVBQ3pDO1lBQ0ksT0FBTyxJQUFJLENBQUMsbUJBQW1CLENBQUM7U0FDbkM7YUFBSTtZQUNGLElBQUksQ0FBQyxtQkFBbUIsR0FBRyx3QkFBVSxDQUFDLElBQUksQ0FBQyxvQkFBb0IsQ0FBQyxDQUFDLFlBQVksU0FBQyw0QkFBa0IsRUFBRyxDQUFDO1lBQ3BHLE9BQU8sSUFBSSxDQUFDLG1CQUFtQixDQUFDO1NBQ2xDO0lBQ0wsQ0FBQztJQUVELGNBQWM7UUFDVixJQUFJLENBQUMsZUFBZSxDQUFDLFVBQVUsRUFBRSxDQUFDO1FBQ2xDLElBQUksQ0FBQyxhQUFhLENBQUMsVUFBVSxFQUFFLENBQUM7UUFDaEMsSUFBSSxDQUFDLGtCQUFrQixDQUFDLFVBQVUsRUFBRSxDQUFDO0lBQ3pDLENBQUM7SUFFRCxvQkFBb0IsQ0FBQyxjQUErQjtRQUNoRCxRQUFRLGNBQWMsRUFBRTtZQUNwQixLQUFLLGNBQWMsQ0FBQyxzQkFBc0I7Z0JBQ3RDLElBQUksQ0FBQyxjQUFjLEVBQUUsQ0FBQztnQkFDdEIsSUFBSSxDQUFDLGVBQWUsQ0FBQyxVQUFVLEVBQUUsQ0FBQztnQkFDdEMsTUFBTTtZQUNOLEtBQUssY0FBYyxDQUFDLHNCQUFzQjtnQkFDdEMsSUFBSSxDQUFDLGVBQWUsQ0FBQyxVQUFVLEVBQUUsQ0FBQztnQkFDdEMsTUFBTTtZQUVOLEtBQUssY0FBYyxDQUFDLG9CQUFvQjtnQkFDcEMsSUFBSSxDQUFDLGNBQWMsRUFBRSxDQUFDO2dCQUN0QixJQUFJLENBQUMsYUFBYSxDQUFDLFVBQVUsRUFBRSxDQUFDO2dCQUNwQyxNQUFNO1lBQ04sS0FBSyxjQUFjLENBQUMsb0JBQW9CO2dCQUNwQyxJQUFJLENBQUMsYUFBYSxDQUFDLFVBQVUsRUFBRSxDQUFDO2dCQUNwQyxNQUFNO1lBRU4sS0FBSyxjQUFjLENBQUMseUJBQXlCO2dCQUN6QyxJQUFJLENBQUMsY0FBYyxFQUFFLENBQUM7Z0JBQ3RCLElBQUksQ0FBQyxrQkFBa0IsQ0FBQyxVQUFVLEVBQUUsQ0FBQztnQkFDekMsTUFBTTtZQUNOLEtBQUssY0FBYyxDQUFDLHlCQUF5QjtnQkFDekMsSUFBSSxDQUFDLGtCQUFrQixDQUFDLFVBQVUsRUFBRSxDQUFDO2dCQUN6QyxNQUFNO1lBRU4sS0FBSyxjQUFjLENBQUMseUJBQXlCO2dCQUN6QyxJQUFJLENBQUMsY0FBYyxFQUFFLENBQUM7Z0JBQ3RCLElBQUksQ0FBQyxrQkFBa0IsQ0FBQyxVQUFVLEVBQUUsQ0FBQztnQkFDekMsTUFBTTtZQUNOLEtBQUssY0FBYyxDQUFDLHlCQUF5QjtnQkFDekMsSUFBSSxDQUFDLGtCQUFrQixDQUFDLFVBQVUsRUFBRSxDQUFDO2dCQUN6QyxNQUFNO1lBRU47Z0JBQ0EsTUFBTTtTQUNUO0lBQ0wsQ0FBQztDQUlKO0FBckdELDRCQXFHQyJ9","assetPath":"Assets/Scripts/UIManager.ts","manifest":{"properties":[],"name":"UIManager","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: e3aa47d3854025e525219c9b626c53d2
+  onlyWriteTrigger: 0

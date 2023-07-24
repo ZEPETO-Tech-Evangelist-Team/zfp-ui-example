@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+guid: 7af9b942f12ba8e469c4c44a2e5b6fab
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass
+    DialogueOption extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start()
+    {\r\n    }\r\n}\r\nexports.default = DialogueOption;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRGlhbG9ndWVPcHRpb24uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJEaWFsb2d1ZU9wdGlvbi50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLGlEQUFxRDtBQUVyRCxNQUFxQixjQUFlLFNBQVEscUNBQXFCO0lBRTdELEtBQUs7SUFFTCxDQUFDO0NBRUo7QUFORCxpQ0FNQyJ9","assetPath":"Assets/Scripts/DialogueOption.ts","manifest":{"properties":[],"name":"DialogueOption","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 7eb677a006a494486136662d05abe0ae
+  onlyWriteTrigger: 0
