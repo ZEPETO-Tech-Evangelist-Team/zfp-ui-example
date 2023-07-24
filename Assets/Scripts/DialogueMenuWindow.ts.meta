@@ -19,10 +19,14 @@ ScriptedImporter:
   WrapperFilters: []
   wrapperOutputDirectory: Generated
   compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
-    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass
-    DialogueMenuWindow extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start()
-    {\r\n    }\r\n    ShowWindow() {\r\n        this.gameObject.SetActive(true);\r\n   
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst DialogueOption_1 = require(\"./DialogueOption\");\r\nclass
+    DialogueMenuWindow extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    constructor()
+    {\r\n        super(...arguments);\r\n        this.dialogueGO = new Array();\r\n       
+    this.dialogueOptions = new Array();\r\n    }\r\n    Start() {\r\n        this.dialogueGO.forEach(go
+    => {\r\n            this.dialogueOptions.push(go.GetComponent($typeof(DialogueOption_1.default)));\r\n       
+    });\r\n    }\r\n    ShowWindow() {\r\n        this.gameObject.SetActive(true);\r\n   
     }\r\n    HideWindow() {\r\n        this.gameObject.SetActive(false);\r\n    }\r\n}\r\nexports.default
-    = DialogueMenuWindow;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRGlhbG9ndWVNZW51V2luZG93LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiRGlhbG9ndWVNZW51V2luZG93LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsaURBQXFEO0FBRXJELE1BQXFCLGtCQUFtQixTQUFRLHFDQUFxQjtJQUVqRSxLQUFLO0lBRUwsQ0FBQztJQUVNLFVBQVU7UUFDYixJQUFJLENBQUMsVUFBVSxDQUFDLFNBQVMsQ0FBQyxJQUFJLENBQUMsQ0FBQztJQUNwQyxDQUFDO0lBRU0sVUFBVTtRQUNiLElBQUksQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLEtBQUssQ0FBQyxDQUFDO0lBQ3JDLENBQUM7Q0FFSjtBQWRELHFDQWNDIn0=","assetPath":"Assets/Scripts/DialogueMenuWindow.ts","manifest":{"properties":[],"name":"DialogueMenuWindow","description":"","hasAnimatorMove":false},"isCompiled":true}'
-  typescriptHash: 69027b25b2dd2bb21391e29ade97cff8
+    = DialogueMenuWindow;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRGlhbG9ndWVNZW51V2luZG93LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiRGlhbG9ndWVNZW51V2luZG93LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQXlDO0FBQ3pDLGlEQUFxRDtBQUNyRCxxREFBOEM7QUFFOUMsTUFBcUIsa0JBQW1CLFNBQVEscUNBQXFCO0lBQXJFOztRQUNXLGVBQVUsR0FBaUIsSUFBSSxLQUFLLEVBQWMsQ0FBQztRQUVsRCxvQkFBZSxHQUFxQixJQUFJLEtBQUssRUFBa0IsQ0FBQztJQWlCNUUsQ0FBQztJQWZHLEtBQUs7UUFDRCxJQUFJLENBQUMsVUFBVSxDQUFDLE9BQU8sQ0FBQyxFQUFFLENBQUMsRUFBRTtZQUN6QixJQUFJLENBQUMsZUFBZSxDQUFDLElBQUksQ0FBQyxFQUFFLENBQUMsWUFBWSxTQUFDLHdCQUFjLEdBQUksQ0FBQztRQUNqRSxDQUFDLENBQUMsQ0FBQTtJQUNOLENBQUM7SUFHTSxVQUFVO1FBQ2IsSUFBSSxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLENBQUM7SUFDcEMsQ0FBQztJQUVNLFVBQVU7UUFDYixJQUFJLENBQUMsVUFBVSxDQUFDLFNBQVMsQ0FBQyxLQUFLLENBQUMsQ0FBQztJQUNyQyxDQUFDO0NBRUo7QUFwQkQscUNBb0JDIn0=","assetPath":"Assets/Scripts/DialogueMenuWindow.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"dialogueGO","type":"UnityEngine.GameObject[]","isArray":true,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"DialogueMenuWindow","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 7223dfa77d25cf438b45ad0f93cdabf8
   onlyWriteTrigger: 0
