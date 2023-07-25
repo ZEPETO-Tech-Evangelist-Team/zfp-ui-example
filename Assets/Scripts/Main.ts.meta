@@ -22,12 +22,11 @@ ScriptedImporter:
     { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
     ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst UIManager_1 = require(\"./UIManager\");\r\nclass
     Main extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    static GetInstance()
-    {\r\n        /*if (this.instance !== null || this.instance !== undefined) { //couldn''t
-    get this to work, always hitting this if\r\n            console.log(\"in if\");\r\n           
-    return this.instance;\r\n        } else {\r\n            console.log(\"in else\");\r\n           
-    this.instance = GameObject.Find(\"Main\").GetComponent<Main>();\r\n        }*/\r\n       
-    return this.instance;\r\n    }\r\n    Awake() {\r\n        Main.instance = this;\r\n       
-    this.UIManager = this.UIManagerGO.GetComponent($typeof(UIManager_1.default));\r\n   
-    }\r\n}\r\nexports.default = Main;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiTWFpbi5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIk1haW4udHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2Q0FBeUM7QUFDekMsaURBQXFEO0FBQ3JELDJDQUF3RDtBQUV4RCxNQUFxQixJQUFLLFNBQVEscUNBQXFCO0lBTzVDLE1BQU0sQ0FBQyxXQUFXO1FBQ3JCOzs7Ozs7V0FNRztRQUVILE9BQU8sSUFBSSxDQUFDLFFBQVEsQ0FBQztJQUN6QixDQUFDO0lBRUQsS0FBSztRQUNELElBQUksQ0FBQyxRQUFRLEdBQUcsSUFBSSxDQUFDO1FBQ3JCLElBQUksQ0FBQyxTQUFTLEdBQUcsSUFBSSxDQUFDLFdBQVcsQ0FBQyxZQUFZLFNBQUMsbUJBQVMsRUFBRyxDQUFDO0lBQ2hFLENBQUM7Q0FFSjtBQXhCRCx1QkF3QkMifQ==","assetPath":"Assets/Scripts/Main.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"UIManagerGO","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"","name":"UIManager","type":"C:/Users/mondu/OneDrive/Documents/zfp-ui-example/Assets/Scripts/UIManager.default","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"Main","description":"","hasAnimatorMove":false},"isCompiled":true}'
-  typescriptHash: 0a666ec377b491386fffea37c934723d
+    {\r\n        if (ZEPETO_Script_1.ZepetoScriptBehaviour.op_Equality(this.instance,
+    null) || this.instance == undefined) {\r\n            this.instance = UnityEngine_1.GameObject.Find(\"Main\").GetComponent($typeof(Main));\r\n       
+    }\r\n        return this.instance;\r\n    }\r\n    Awake() {\r\n        this.UIManager
+    = this.UIManagerGO.GetComponent($typeof(UIManager_1.default));\r\n    }\r\n}\r\nexports.default
+    = Main;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiTWFpbi5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIk1haW4udHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2Q0FBeUM7QUFDekMsaURBQXFEO0FBQ3JELDJDQUF3RDtBQUV4RCxNQUFxQixJQUFLLFNBQVEscUNBQXFCO0lBTzVDLE1BQU0sQ0FBQyxXQUFXO1FBQ3JCLElBQUksQUFYSCxxQ0FBcUIsQ0FzQmtzTSxXQUFZLENBWGh1TSxJQUFJLENBQUMsUUFBUSxFQUFJLElBQUksS0FBSSxJQUFJLENBQUMsUUFBUSxJQUFJLFNBQVMsRUFBRTtZQUNyRCxJQUFJLENBQUMsUUFBUSxHQUFHLHdCQUFVLENBQUMsSUFBSSxDQUFDLE1BQU0sQ0FBQyxDQUFDLFlBQVksU0FBQyxJQUFJLEVBQUcsQ0FBQztTQUNoRTtRQUVELE9BQU8sSUFBSSxDQUFDLFFBQVEsQ0FBQztJQUN6QixDQUFDO0lBRUQsS0FBSztRQUNELElBQUksQ0FBQyxTQUFTLEdBQUcsSUFBSSxDQUFDLFdBQVcsQ0FBQyxZQUFZLFNBQUMsbUJBQVMsRUFBRyxDQUFDO0lBQ2hFLENBQUM7Q0FFSjtBQW5CRCx1QkFtQkMifQ==","assetPath":"Assets/Scripts/Main.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"UIManagerGO","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"","name":"UIManager","type":"C:/Users/leehy/Documents/Github
+    Projects/FellowshipProgram/zfp-ui-example/Assets/Scripts/UIManager.default","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"Main","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 7c490a4be2cc07800229fe9d14d9886b
   onlyWriteTrigger: 0

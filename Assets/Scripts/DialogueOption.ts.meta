@@ -19,8 +19,13 @@ ScriptedImporter:
   WrapperFilters: []
   wrapperOutputDirectory: Generated
   compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
-    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass
-    DialogueOption extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start()
-    {\r\n    }\r\n}\r\nexports.default = DialogueOption;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRGlhbG9ndWVPcHRpb24uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJEaWFsb2d1ZU9wdGlvbi50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLGlEQUFxRDtBQUVyRCxNQUFxQixjQUFlLFNBQVEscUNBQXFCO0lBRTdELEtBQUs7SUFFTCxDQUFDO0NBRUo7QUFORCxpQ0FNQyJ9","assetPath":"Assets/Scripts/DialogueOption.ts","manifest":{"properties":[],"name":"DialogueOption","description":"","hasAnimatorMove":false},"isCompiled":true}'
-  typescriptHash: 7eb677a006a494486136662d05abe0ae
+    { value: true });\r\nconst TMPro_1 = require(\"TMPro\");\r\nconst UnityEngine_UI_1
+    = require(\"UnityEngine.UI\");\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass
+    DialogueOption extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Awake()
+    {\r\n        this.dialogueText = this.GetComponentInChildren($typeof(TMPro_1.TextMeshProUGUI));\r\n       
+    this.button = this.GetComponentInChildren($typeof(UnityEngine_UI_1.Button));\r\n   
+    }\r\n    SetDialogue(s, onClick) {\r\n        this.dialogueText.text = s;\r\n       
+    this.button.onClick.AddListener(onClick);\r\n    }\r\n}\r\nexports.default =
+    DialogueOption;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRGlhbG9ndWVPcHRpb24uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJEaWFsb2d1ZU9wdGlvbi50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLGlDQUF3QztBQUV4QyxtREFBd0M7QUFDeEMsaURBQXFEO0FBRXJELE1BQXFCLGNBQWUsU0FBUSxxQ0FBcUI7SUFHN0QsS0FBSztRQUVELElBQUksQ0FBQyxZQUFZLEdBQUcsSUFBSSxDQUFDLHNCQUFzQixTQUFDLHVCQUFlLEVBQUcsQ0FBQztRQUNuRSxJQUFJLENBQUMsTUFBTSxHQUFHLElBQUksQ0FBQyxzQkFBc0IsU0FBQyx1QkFBTSxFQUFHLENBQUM7SUFDeEQsQ0FBQztJQUVNLFdBQVcsQ0FBQyxDQUFTLEVBQUUsT0FBb0I7UUFFOUMsSUFBSSxDQUFDLFlBQVksQ0FBQyxJQUFJLEdBQUcsQ0FBQyxDQUFDO1FBQzNCLElBQUksQ0FBQyxNQUFNLENBQUMsT0FBTyxDQUFDLFdBQVcsQ0FBQyxPQUFPLENBQUMsQ0FBQztJQUM3QyxDQUFDO0NBRUo7QUFmRCxpQ0FlQyJ9","assetPath":"Assets/Scripts/DialogueOption.ts","manifest":{"properties":[],"name":"DialogueOption","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 31776e38c89eecbfe48cdeac840aa1c1
   onlyWriteTrigger: 0

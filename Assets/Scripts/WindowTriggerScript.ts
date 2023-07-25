@@ -10,7 +10,19 @@ export default class WindowTriggerScript extends ZepetoScriptBehaviour {
     }
 
     OnTriggerEnter(other : Collider) {
-        Main.GetInstance().UIManager.ExecuteWindowCommand(this.WindowCallType);
+        if (other.gameObject.tag == "Player")
+        {
+            Main.GetInstance().UIManager.ExecuteWindowCommand(this.WindowCallType);
+        }
+        
     } 
+    
+    OnTriggerExit(other : Collider)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            Main.GetInstance().UIManager.HideAllWindows();
+        }
+    }
 
 }

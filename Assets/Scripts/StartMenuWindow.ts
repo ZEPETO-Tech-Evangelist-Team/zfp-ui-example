@@ -24,6 +24,8 @@ export default class StartMenuWindow extends ZepetoScriptBehaviour {
         ZepetoPlayers.instance.CreatePlayerWithZepetoId("", WorldService.userId, new SpawnInfo(), true);
         ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(() => {
             let player : LocalPlayer = ZepetoPlayers.instance.LocalPlayer;
+            player.zepetoPlayer.character.gameObject.tag = "Player";
+            player.zepetoPlayer.character.gameObject.name = WorldService.userId;
         });
     }
 
