@@ -20,13 +20,18 @@ export enum WindowCallType{
 }
 
 export default class UIManager extends ZepetoScriptBehaviour {
+    StartMenuWindowGO : GameObject;
+    EndMenuWindowGO : GameObject;
+    DialogueMenuWindowGO : GameObject;
+    SettingsMenuWindowGO : GameObject;
+
     private _startMenuWindow : StartMenuWindow;
     private _endMenuWindow : EndMenuWindow;
     private _dialogueMenuWindow : DialogueMenuWindow;
     private _settingsMenuWindow : SettingsMenuWindow;
 
+    Start() { 
 
-    Start() {    
     }
 
     public get StartMenuWindow(): StartMenuWindow
@@ -34,9 +39,8 @@ export default class UIManager extends ZepetoScriptBehaviour {
         if (this._startMenuWindow != undefined)
         {
             return this._startMenuWindow;
-        }else{
-           this._startMenuWindow = GameObject.Find("StartMenuWindow").GetComponent<StartMenuWindow>();
-           return this._startMenuWindow;
+        } else {
+           return this.StartMenuWindowGO.GetComponent<StartMenuWindow>();
         }
     }
 
@@ -45,9 +49,8 @@ export default class UIManager extends ZepetoScriptBehaviour {
         if (this._endMenuWindow != undefined)
         {
             return this._endMenuWindow;
-        }else{
-           this._endMenuWindow = GameObject.Find("EndMenuWindow").GetComponent<EndMenuWindow>();
-           return this._endMenuWindow;
+        } else {
+           return this.EndMenuWindowGO.GetComponent<EndMenuWindow>();
         }
     }
 
@@ -56,9 +59,8 @@ export default class UIManager extends ZepetoScriptBehaviour {
         if (this._dialogueMenuWindow != undefined)
         {
             return this._dialogueMenuWindow;
-        }else{
-           this._dialogueMenuWindow = GameObject.Find("DialogueMenuWindow").GetComponent<DialogueMenuWindow>();
-           return this._dialogueMenuWindow;
+        } else {
+           return this.DialogueMenuWindowGO.GetComponent<DialogueMenuWindow>();
         }
     }
 
@@ -67,16 +69,20 @@ export default class UIManager extends ZepetoScriptBehaviour {
         if (this._settingsMenuWindow != undefined)
         {
             return this._settingsMenuWindow;
-        }else{
-           this._settingsMenuWindow = GameObject.Find("SettingsMenuWindow").GetComponent<SettingsMenuWindow>();
-           return this._settingsMenuWindow;
+        } else {
+           return this.SettingsMenuWindowGO.GetComponent<SettingsMenuWindow>();
         }
+    }
+
+    InitWindows() {
+
     }
 
     HideAllWindows() {
         this.StartMenuWindow.HideWindow();
         this.EndMenuWindow.HideWindow();
         this.DialogueMenuWindow.HideWindow();
+        this.SettingsMenuWindow.HideWindow();
     }
 
     ExecuteWindowCommand(windowCallType : WindowCallType) {

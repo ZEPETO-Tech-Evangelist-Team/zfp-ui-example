@@ -19,8 +19,12 @@ ScriptedImporter:
   WrapperFilters: []
   wrapperOutputDirectory: Generated
   compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
-    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    UIManager_1 = require(\"./UIManager\");\r\nconst Main_1 = require(\"./Main\");\r\nclass
     HudMenuWindow extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start()
-    {\r\n    }\r\n}\r\nexports.default = HudMenuWindow;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiSHVkTWVudVdpbmRvdy5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkh1ZE1lbnVXaW5kb3cudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSxpREFBcUQ7QUFFckQsTUFBcUIsYUFBYyxTQUFRLHFDQUFxQjtJQUU1RCxLQUFLO0lBRUwsQ0FBQztDQUVKO0FBTkQsZ0NBTUMifQ==","assetPath":"Assets/Scripts/HudMenuWindow.ts","manifest":{"properties":[],"name":"HudMenuWindow","description":"","hasAnimatorMove":false},"isCompiled":true}'
-  typescriptHash: 19f12edb9a7e3186bb3af5257b2cbac2
+    {\r\n        this.SettingsButton.onClick.AddListener(() => {\r\n            this.ClickSettingsButton();\r\n       
+    });\r\n    }\r\n    ClickSettingsButton() {\r\n        console.log(\"click settings
+    button\");\r\n        Main_1.default.GetInstance().UIManager.ExecuteWindowCommand(UIManager_1.WindowCallType.SHOW_SETTINGS_MENU_WINDOW);\r\n   
+    }\r\n}\r\nexports.default = HudMenuWindow;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiSHVkTWVudVdpbmRvdy5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkh1ZE1lbnVXaW5kb3cudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFDQSxpREFBcUQ7QUFDckQsMkNBQTZDO0FBQzdDLGlDQUEwQjtBQUUxQixNQUFxQixhQUFjLFNBQVEscUNBQXFCO0lBRzVELEtBQUs7UUFDRCxJQUFJLENBQUMsY0FBYyxDQUFDLE9BQU8sQ0FBQyxXQUFXLENBQUMsR0FBRyxFQUFFO1lBQ3pDLElBQUksQ0FBQyxtQkFBbUIsRUFBRSxDQUFDO1FBQy9CLENBQUMsQ0FBQyxDQUFDO0lBQ1AsQ0FBQztJQUVELG1CQUFtQjtRQUNmLE9BQU8sQ0FBQyxHQUFHLENBQUMsdUJBQXVCLENBQUMsQ0FBQztRQUNyQyxjQUFJLENBQUMsV0FBVyxFQUFFLENBQUMsU0FBUyxDQUFDLG9CQUFvQixDQUFDLDBCQUFjLENBQUMseUJBQXlCLENBQUMsQ0FBQztJQUNoRyxDQUFDO0NBRUo7QUFkRCxnQ0FjQyJ9","assetPath":"Assets/Scripts/HudMenuWindow.ts","manifest":{"properties":[{"assembly":"UnityEngine.UI","name":"SettingsButton","type":"UnityEngine.UI.Button","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"HudMenuWindow","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 65ca7ddc86f08a40386dfe52ef33f144
   onlyWriteTrigger: 0

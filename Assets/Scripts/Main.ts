@@ -10,17 +10,20 @@ export default class Main extends ZepetoScriptBehaviour {
     public UIManager : UIManager;
 
     public static GetInstance() : Main {
-        if (this.instance !== null) {
+        /*if (this.instance !== null || this.instance !== undefined) { //couldn't get this to work, always hitting this if
+            console.log("in if");
             return this.instance;
         } else {
-            GameObject.Find("Main").GetComponent<Main>();
-        }
+            console.log("in else");
+            this.instance = GameObject.Find("Main").GetComponent<Main>();
+        }*/
+
+        return this.instance;
     }
 
-    Start() {
+    Awake() {
+        Main.instance = this;
         this.UIManager = this.UIManagerGO.GetComponent<UIManager>();
-
-        this.UIManager.ExecuteWindowCommand(WindowCallType.SHOW_START_MENU_WINDOW);
     }
 
 }

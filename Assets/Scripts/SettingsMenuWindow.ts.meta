@@ -21,7 +21,10 @@ ScriptedImporter:
   compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
     { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass
     SettingsMenuWindow extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start()
-    {\r\n    }\r\n    ShowWindow() {\r\n    }\r\n    HideWindow() {\r\n    }\r\n}\r\nexports.default
-    = SettingsMenuWindow;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU2V0dGluZ3NNZW51V2luZG93LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiU2V0dGluZ3NNZW51V2luZG93LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsaURBQXFEO0FBRXJELE1BQXFCLGtCQUFtQixTQUFRLHFDQUFxQjtJQUVqRSxLQUFLO0lBRUwsQ0FBQztJQUVELFVBQVU7SUFFVixDQUFDO0lBRUQsVUFBVTtJQUVWLENBQUM7Q0FFSjtBQWRELHFDQWNDIn0=","assetPath":"Assets/Scripts/SettingsMenuWindow.ts","manifest":{"properties":[],"name":"SettingsMenuWindow","description":"","hasAnimatorMove":false},"isCompiled":true}'
-  typescriptHash: daf4e8b362644978ac457d05604d1165
+    {\r\n        this.XButton.onClick.AddListener(() => {\r\n            this.ClickXButton();\r\n       
+    });\r\n    }\r\n    ShowWindow() {\r\n        this.gameObject.SetActive(true);\r\n   
+    }\r\n    HideWindow() {\r\n        this.gameObject.SetActive(false);\r\n    }\r\n   
+    ClickXButton() {\r\n        this.HideWindow();\r\n    }\r\n}\r\nexports.default
+    = SettingsMenuWindow;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU2V0dGluZ3NNZW51V2luZG93LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiU2V0dGluZ3NNZW51V2luZG93LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQ0EsaURBQXFEO0FBRXJELE1BQXFCLGtCQUFtQixTQUFRLHFDQUFxQjtJQUdqRSxLQUFLO1FBQ0QsSUFBSSxDQUFDLE9BQU8sQ0FBQyxPQUFPLENBQUMsV0FBVyxDQUFDLEdBQUcsRUFBRTtZQUNsQyxJQUFJLENBQUMsWUFBWSxFQUFFLENBQUM7UUFDeEIsQ0FBQyxDQUFDLENBQUM7SUFDUCxDQUFDO0lBRUQsVUFBVTtRQUNOLElBQUksQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLElBQUksQ0FBQyxDQUFDO0lBQ3BDLENBQUM7SUFFRCxVQUFVO1FBQ04sSUFBSSxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7SUFDckMsQ0FBQztJQUVELFlBQVk7UUFDUixJQUFJLENBQUMsVUFBVSxFQUFFLENBQUM7SUFDdEIsQ0FBQztDQUVKO0FBckJELHFDQXFCQyJ9","assetPath":"Assets/Scripts/SettingsMenuWindow.ts","manifest":{"properties":[{"assembly":"UnityEngine.UI","name":"XButton","type":"UnityEngine.UI.Button","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"SettingsMenuWindow","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 1ca4163022db91f811997127a9fb23da
   onlyWriteTrigger: 0
