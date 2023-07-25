@@ -19,10 +19,16 @@ ScriptedImporter:
   WrapperFilters: []
   wrapperOutputDirectory: Generated
   compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
-    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass
+    { value: true });\r\nconst ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst ZEPETO_World_1 = require(\"ZEPETO.World\");\r\nclass
     StartMenuWindow extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start()
-    {\r\n    }\r\n    ShowWindow() {\r\n        this.gameObject.SetActive(true);\r\n   
-    }\r\n    HideWindow() {\r\n        this.gameObject.SetActive(false);\r\n    }\r\n}\r\nexports.default
-    = StartMenuWindow;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU3RhcnRNZW51V2luZG93LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiU3RhcnRNZW51V2luZG93LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsaURBQXFEO0FBRXJELE1BQXFCLGVBQWdCLFNBQVEscUNBQXFCO0lBRTlELEtBQUs7SUFFTCxDQUFDO0lBRU0sVUFBVTtRQUNiLElBQUksQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLElBQUksQ0FBQyxDQUFDO0lBQ3BDLENBQUM7SUFFTSxVQUFVO1FBQ2IsSUFBSSxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7SUFDckMsQ0FBQztDQUVKO0FBZEQsa0NBY0MifQ==","assetPath":"Assets/Scripts/StartMenuWindow.ts","manifest":{"properties":[],"name":"StartMenuWindow","description":"","hasAnimatorMove":false},"isCompiled":true}'
-  typescriptHash: bdea7e192bb94a62673c61d578b44b75
+    {\r\n        this.StartButton.onClick.AddListener(() => { this.LoadCharacter();
+    });\r\n    }\r\n    ShowWindow() {\r\n        this.gameObject.SetActive(true);\r\n   
+    }\r\n    HideWindow() {\r\n        this.gameObject.SetActive(false);\r\n    }\r\n   
+    LoadCharacter() {\r\n        this.HideWindow();\r\n        $extension(\"ZEPETO.Character.Controller.ZepetoPlayersExtension\").CreatePlayerWithZepetoId(ZEPETO_Character_Controller_1.ZepetoPlayers.instance,
+    \"\", ZEPETO_World_1.WorldService.userId, new ZEPETO_Character_Controller_1.SpawnInfo(),
+    true);\r\n        ZEPETO_Character_Controller_1.ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(()
+    => {\r\n            let player = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer;\r\n       
+    });\r\n    }\r\n}\r\nexports.default = StartMenuWindow;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU3RhcnRNZW51V2luZG93LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiU3RhcnRNZW51V2luZG93LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQ0EsNkVBQW9GO0FBQ3BGLGlEQUFxRDtBQUNyRCwrQ0FBNEM7QUFFNUMsTUFBcUIsZUFBZ0IsU0FBUSxxQ0FBcUI7SUFHOUQsS0FBSztRQUNELElBQUksQ0FBQyxXQUFXLENBQUMsT0FBTyxDQUFDLFdBQVcsQ0FBQyxHQUFHLEVBQUUsR0FBRSxJQUFJLENBQUMsYUFBYSxFQUFFLENBQUEsQ0FBQSxDQUFDLENBQUMsQ0FBQztJQUN2RSxDQUFDO0lBRU0sVUFBVTtRQUNiLElBQUksQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLElBQUksQ0FBQyxDQUFDO0lBQ3BDLENBQUM7SUFFTSxVQUFVO1FBQ2IsSUFBSSxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7SUFDckMsQ0FBQztJQUVELGFBQWE7UUFDVCxJQUFJLENBQUMsVUFBVSxFQUFFLENBQUM7UUFFbEIsaUVBQXVCLHdCQUF3QixDQUEvQywyQ0FBYSxDQUFDLFFBQVEsRUFBMEIsRUFBRSxFQUFFLDJCQUFZLENBQUMsTUFBTSxFQUFFLElBQUksdUNBQVMsRUFBRSxFQUFFLElBQUksRUFBRTtRQUNoRywyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxrQkFBa0IsQ0FBQyxXQUFXLENBQUMsR0FBRyxFQUFFO1lBQ3ZELElBQUksTUFBTSxHQUFpQiwyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxXQUFXLENBQUM7UUFDbEUsQ0FBQyxDQUFDLENBQUM7SUFDUCxDQUFDO0NBRUo7QUF4QkQsa0NBd0JDIn0=","assetPath":"Assets/Scripts/StartMenuWindow.ts","manifest":{"properties":[{"assembly":"UnityEngine.UI","name":"StartButton","type":"UnityEngine.UI.Button","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"StartMenuWindow","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 744892228573bda01805cc317f25946f
   onlyWriteTrigger: 0

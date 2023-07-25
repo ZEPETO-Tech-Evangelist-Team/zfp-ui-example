@@ -1,0 +1,27 @@
+fileFormatVersion: 2
+guid: 199b56061903bf94897f1fd87bf1611a
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    Main_1 = require(\"./Main\");\r\nclass WindowTriggerScript extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    Start() {\r\n    }\r\n    OnTriggerEnter(other) {\r\n        Main_1.default.GetInstance().UIManager.ExecuteWindowCommand(this.WindowCallType);\r\n   
+    }\r\n}\r\nexports.default = WindowTriggerScript;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiV2luZG93VHJpZ2dlclNjcmlwdC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIldpbmRvd1RyaWdnZXJTY3JpcHQudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFDQSxpREFBcUQ7QUFDckQsaUNBQTBCO0FBRzFCLE1BQXFCLG1CQUFvQixTQUFRLHFDQUFxQjtJQUVsRSxLQUFLO0lBRUwsQ0FBQztJQUVELGNBQWMsQ0FBQyxLQUFnQjtRQUMzQixjQUFJLENBQUMsV0FBVyxFQUFFLENBQUMsU0FBUyxDQUFDLG9CQUFvQixDQUFDLElBQUksQ0FBQyxjQUFjLENBQUMsQ0FBQztJQUMzRSxDQUFDO0NBRUo7QUFWRCxzQ0FVQyJ9","assetPath":"Assets/Scripts/WindowTriggerScript.ts","manifest":{"properties":[{"assembly":"","name":"WindowCallType","type":"WindowCallType","isArray":false,"initValue":[],"enumKeys":["SHOW_START_MENU_WINDOW","HIDE_START_MENU_WINDOW","SHOW_END_MENU_WINDOW","HIDE_END_MENU_WINDOW","SHOW_DIALOGUE_MENU_WINDOW","HIDE_DIALOGUE_MENU_WINDOW","SHOW_SETTINGS_MENU_WINDOW","HIDE_SETTINGS_MENU_WINDOW"],"enumValues":["1","2","3","4","5","6","7","8"],"attributes":[]}],"name":"WindowTriggerScript","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 1e4c8f1f7665ca5625785287451c477b
+  onlyWriteTrigger: 0

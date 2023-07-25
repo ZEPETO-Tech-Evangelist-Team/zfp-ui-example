@@ -19,10 +19,12 @@ ScriptedImporter:
   WrapperFilters: []
   wrapperOutputDirectory: Generated
   compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
-    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass
-    EndMenuWindow extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start()
-    {\r\n    }\r\n    ShowWindow() {\r\n        this.gameObject.SetActive(true);\r\n   
-    }\r\n    HideWindow() {\r\n        this.gameObject.SetActive(false);\r\n    }\r\n}\r\nexports.default
-    = EndMenuWindow;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRW5kTWVudVdpbmRvdy5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkVuZE1lbnVXaW5kb3cudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSxpREFBcUQ7QUFFckQsTUFBcUIsYUFBYyxTQUFRLHFDQUFxQjtJQUU1RCxLQUFLO0lBRUwsQ0FBQztJQUVNLFVBQVU7UUFDYixJQUFJLENBQUMsVUFBVSxDQUFDLFNBQVMsQ0FBQyxJQUFJLENBQUMsQ0FBQztJQUNwQyxDQUFDO0lBRU0sVUFBVTtRQUNiLElBQUksQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLEtBQUssQ0FBQyxDQUFDO0lBQ3JDLENBQUM7Q0FFSjtBQWRELGdDQWNDIn0=","assetPath":"Assets/Scripts/EndMenuWindow.ts","manifest":{"properties":[],"name":"EndMenuWindow","description":"","hasAnimatorMove":false},"isCompiled":true}'
-  typescriptHash: c337f5c774272e5d40d6bc4e65358d9e
+    { value: true });\r\nconst UnityEngine_SceneManagement_1 = require(\"UnityEngine.SceneManagement\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass EndMenuWindow extends
+    ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start() {\r\n        this.ReplayButton.onClick.AddListener(()
+    => { this.RestartGame(); });\r\n    }\r\n    ShowWindow() {\r\n        this.gameObject.SetActive(true);\r\n   
+    }\r\n    HideWindow() {\r\n        this.gameObject.SetActive(false);\r\n    }\r\n   
+    RestartGame() {\r\n        UnityEngine_SceneManagement_1.SceneManager.LoadScene(\"Main\");\r\n   
+    }\r\n}\r\nexports.default = EndMenuWindow;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRW5kTWVudVdpbmRvdy5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkVuZE1lbnVXaW5kb3cudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2RUFBMkQ7QUFFM0QsaURBQXFEO0FBRXJELE1BQXFCLGFBQWMsU0FBUSxxQ0FBcUI7SUFFNUQsS0FBSztRQUNELElBQUksQ0FBQyxZQUFZLENBQUMsT0FBTyxDQUFDLFdBQVcsQ0FBQyxHQUFHLEVBQUUsR0FBRSxJQUFJLENBQUMsV0FBVyxFQUFFLENBQUEsQ0FBQSxDQUFDLENBQUMsQ0FBQztJQUN0RSxDQUFDO0lBRU0sVUFBVTtRQUNiLElBQUksQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLElBQUksQ0FBQyxDQUFDO0lBQ3BDLENBQUM7SUFFTSxVQUFVO1FBQ2IsSUFBSSxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7SUFDckMsQ0FBQztJQUVNLFdBQVc7UUFDZCwwQ0FBWSxDQUFDLFNBQVMsQ0FBQyxNQUFNLENBQUMsQ0FBQztJQUNuQyxDQUFDO0NBRUo7QUFsQkQsZ0NBa0JDIn0=","assetPath":"Assets/Scripts/EndMenuWindow.ts","manifest":{"properties":[{"assembly":"UnityEngine.UI","name":"ReplayButton","type":"UnityEngine.UI.Button","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"EndMenuWindow","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 620bd0a6932eef5fc367a43f63c1732a
   onlyWriteTrigger: 0
